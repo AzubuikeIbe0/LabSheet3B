@@ -8,6 +8,11 @@ int main()
 {
 	MyIntVector v; //default constructor will set size to 10
 	v.push_back(2); // push the integer 2 into the vector
+	v.size();
+	v.resize();
+	v.capacity();
+	v.at(5);
+	v.operator[](5);
 
 
 	for (int i = 0; i < v.size(); ++i)
