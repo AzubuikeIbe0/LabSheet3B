@@ -1,14 +1,13 @@
 #include <iostream>
 #include "myintvector.h"
-using namespace std;
 
 
 
-MyIntVector() {
+MyIntVector::MyIntVector() {
 	m_size = 0;
 	m_capacity = 10;
-	if (n < 0) error("negative size array");
-	v = new int[10];
+	arrPtr = new int[10]
+	
 	for (int i = 0; i < m_capacity; ++i) {
 		arrPtr[i] = 0;
 	}
@@ -72,8 +71,14 @@ MyIntVector::~MyIntVector() {
 	delete[] v;
 }
 
-MyIntVector::at(int i) {
-	return v[i]
+const int MyIntVector::at(int i) {
+	if(i> m_size) {
+		std::cout << "array out of bounds" ;
+	}
+	else {
+		std::cout << "Element at index: " << i << " is " << arrPtr[i];
+	}
+	return arrPtr[i]
 }
 
 
